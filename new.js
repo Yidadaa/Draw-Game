@@ -51,10 +51,15 @@ Draw.prototype = {
     },
     setColor: function(color) {
         if (color) this.ctx.lineColor = color;
+    },
+    clearAll: function () {
+        this.ctx.clearRect(0,0,this.wrap.width,this.wrap.height);
     }
 }
 
 function init() {
-    var drawIt=new Draw();
-    
+    var drawIt=new Draw('#paper');
+    $('#clear-btn').addEventListener('click',function () {
+        drawIt.clearAll();
+    })
 }
