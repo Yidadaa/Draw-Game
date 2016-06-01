@@ -1,0 +1,31 @@
+body {
+    font-size: 62.5%;
+    font-family: "微软雅黑";
+}
+body,button {
+    padding: 0;
+    margin: 0;
+}
+
+button {
+    background-color: dodgerblue;
+    color: #fff;
+    border: none;
+    outline: none;
+}
+button:hover {
+    background-color: deepskyblue;
+}
+#clear-btn {
+    line-height: 1rem;
+    width: 3rem;
+    font-size: 0.6rem;
+}
+#paper {
+    border: 0.05rem solid #aaa;
+    display: block;
+}
+#tool-bar {
+    padding: 0.4rem;
+    margin-top: -0.01rem;
+}

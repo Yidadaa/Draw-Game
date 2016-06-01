@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no" id="viewport">
+    <title>你画我猜</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+</head>
+<body onload="init()">
+    <canvas id="paper">您的腊鸡浏览器仿佛不支持HTML5</canvas>
+    <div id="tool-bar">
+        <button id="clear-btn">重画</button>
+        
+    </div>
+</body>
+<script src="{{url_for('static',filename='new.js')}}"></script>
+</html>

@@ -11,15 +11,20 @@ function Draw(wrap) {
 }
 Draw.prototype = {
     init: function() {
-        var rootObj=this;//利用一个变量中转指针对象
+        var self=this;//利用一个变量中转指针对象
+        this.wrap.width=screen.width;
+        this.wrap.height=screen.height*0.5;
+        $('html').style.fontSize=screen.height*0.05+'px';
+        this.setWidth(defualtWidth=screen.width*0.005);
+        //设置必要的默认参数，保证全平台一致
         if (!this.ctx) throw Error("初始化失败！");
         this.wrap.addEventListener('touchmove', function (e) {
             e.preventDefault();
-            rootObj.drawing(e);
+            self.drawing(e);
         });
         this.wrap.addEventListener('touchstart', function(e) {
-            rootObj.tempArray = [];
-            rootObj.tempArray.push({
+            self.tempArray = [];
+            self.tempArray.push({
                 x: e.touches[0].clientX,
                 y: e.touches[0].clientY
             });
