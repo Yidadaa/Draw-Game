@@ -13,17 +13,29 @@ button {
     border: none;
     outline: none;
 }
-#clear-btn:hover {
+#clear-btn:hover,#cancel-btn:hover {
     background-color: deepskyblue;
 }
-#clear-btn {
+#clear-btn,#cancel-btn {
     height: 1rem;
     width: 3rem;
-    font-size: 0.6rem;
+    font-size: 0.5rem;
     float: left;
+    border-radius: 5px;
+}
+#cancel-btn {
+    float: right;
+}
+#info {
+    height: auto;
+    overflow: auto;
+    font-size: 0.4rem;
+    padding: 0.3rem;
+    background-color: #888;
+    color: #fff;
 }
 #paper {
-    border: 0.05rem solid #aaa;
+    border-bottom: #aaa 1px solid;
     display: block;
 }
 #tool-bar {
@@ -39,6 +51,7 @@ button {
 }
 #set-lineWidth {
     border: 5px solid #eee;
+    margin-left: 1rem;
 }
 #panel {
     height: 1.5rem;
@@ -67,4 +80,11 @@ button {
 }
 #width-setter {
     display: none;
+}
+#my-score {
+    font-size: 0.5rem;
+    padding: 0 0.4rem 0 0.4rem;
+    border-top: #aaa 1px solid;
+    overflow: auto;
+    height: 1.2rem;
 }

@@ -8,18 +8,26 @@
 </head>
 <body onload="init()">
     <div id="wrap">
+        <div id="info">
+            <span id="username" style="float:left">陶菊画：（四个字）</span>
+            <span id="time" style="float:right">剩余时间：30S</span>
+        </div>
         <canvas id="paper">您的腊鸡浏览器仿佛不支持HTML5</canvas>
     </div>
     <div id="tool-bar">
         <button id="clear-btn">重画</button>
         <button class="list-btn" id="set-lineWidth"></button>
         <button class="list-btn" id="set-lineColor"></button>
+        <button id="cancel-btn">撤销</button>
         <div id="panel">
             <div id="colors">
-                <span style="float:left;display:block;color:#aaa;font-size:0.6rem">画笔颜色:</span>
+                <span style="float:left;display:block;color:#aaa;font-size:0.6rem;margin-top:0.15rem">画笔颜色:</span>
             </div>
             <input type="range" min="30" max="120" id="width-setter">
         </div>
+    </div>
+    <div id="my-score">
+        <div style="margin-top:0.3rem;color:#aaa">得分：12 当前排名：2</div>
     </div>
 </body>
 <script src="{{url_for('static',filename='new.js')}}"></script>

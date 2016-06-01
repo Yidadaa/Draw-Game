@@ -25,8 +25,8 @@ Draw.prototype = {
         this.wrap.addEventListener('touchstart', function(e) {
             self.tempArray = [];
             self.tempArray.push({
-                x: e.touches[0].clientX,
-                y: e.touches[0].clientY
+                x: e.touches[0].clientX - self.wrap.offsetLeft,
+                y: e.touches[0].clientY - self.wrap.offsetTop
             });
         });
         //绑定触摸事件
@@ -36,8 +36,8 @@ Draw.prototype = {
             x: undefined,
             y: undefined
         };
-        curPosition.x = parseInt(event.touches[0].clientX);
-        curPosition.y = parseInt(event.touches[0].clientY);
+        curPosition.x = parseInt(event.touches[0].clientX - this.wrap.offsetLeft);
+        curPosition.y = parseInt(event.touches[0].clientY - this.wrap.offsetTop);
         this.tempArray.push(curPosition);
         if (this.tempArray.length === 3) {
             this.tempArray.shift();
@@ -96,7 +96,8 @@ function init() {
         }
     });
 
-    var colors = ['#FFCD00', '#F5001D', '#2DD700', '#624AD8', '#000000'];
+    var colors = ['#000000', '#FFCD00', '#F5001D', '#2DD700', '#624AD8'];
+    $('#set-lineColor').style.backgroundColor = colors[0];
     for (var i in colors) {
         var node = document.createElement('button');
         node.className = 'list-btn color-btn';
